@@ -1,0 +1,32 @@
+Navigator Error
+
+An unexpected error occurred on Navigator start-up
+Report
+
+Please report this issue in the anaconda issue tracker
+Main Error
+
+byte indices must be integers or slices, not str
+
+Traceback
+
+Traceback (most recent call last):
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\exceptions.py", line 75, in exception_handler
+    return_value = func(*args, **kwargs)
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 115, in start_app
+    window = run_app(splash)
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\app\start.py", line 58, in run_app
+    window = MainWindow(splash=splash)
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\widgets\main_window.py", line 160, in __init__
+    self.api = AnacondaAPI()
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 1205, in AnacondaAPI
+    ANACONDA_API = _AnacondaAPI()
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\api\anaconda_api.py", line 65, in __init__
+    self._conda_api = CondaAPI()
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 1622, in CondaAPI
+    CONDA_API = _CondaAPI()
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 340, in __init__
+    self.set_conda_prefix()
+  File "C:\Users\Prasanta Sahoo\Anaconda3\lib\site-packages\anaconda_navigator\api\conda_api.py", line 489, in set_conda_prefix
+    self.ROOT_PREFIX = info['root_prefix']
+TypeError: byte indices must be integers or slices, not str
